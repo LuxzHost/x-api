@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luxz API - Docs</title>
+<meta name="description" id="meta-description" content="">
+
+<meta property="og:type" content="website">
+<meta property="og:description" id="og-description">
+<meta property="og:image" content="/og-image.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" id="twitter-title">
+<meta name="twitter:description" id="twitter-description">
+
+<meta name="theme-color" content="#181818">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+<link rel="icon" href="/favicon.ico">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+<style>
+::-webkit-scrollbar { display: none }
+
+body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background-color: #181818;
+    letter-spacing: -0.4px;
+    color: #e5e7eb;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.04) 1.5px, transparent 1.5px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1.5px, transparent 1.5px);
+    background-size: 40px 40px;
+    z-index: -1;
+}
+
+/* ===== LOADER ===== */
+#loadingScreen {
+    transition: opacity .5s ease;
+}
+
+.loader {
+    width: 42px;
+    height: 42px;
+    border: 3px solid #2E2E2E;
+    border-top-color: #e5e7eb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+</style>
+</head>
+
+<body class="antialiased">
+
+<!-- ===== LOADING ===== -->
+<div id="loadingScreen" class="fixed inset-0 bg-[#181818] flex flex-col items-center justify-center z-50">
+    <div class="text-center mb-8">
+        <div class="loader mx-auto mb-6"></div>
+        <p class="text-slate-400">Loading documentation...</p>
+    </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="pt-20 px-8">
+<div class="max-w-2xl mx-auto">
+
+<h1 id="hero-title"
+    class="flex flex-wrap items-center gap-2 text-3xl md:text-5xl font-semibold text-white mb-6"
+    data-aos="fade-up">
+    Loading...
+</h1>
+
+<p id="hero-description"
+   class="font-medium text-sm text-slate-300 mb-8 leading-relaxed"
+   data-aos="fade-up" data-aos-delay="150">
+</p>
+
+<a href="/docs"
+   class="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium border border-[#2E2E2E]
+          rounded-lg text-sm hover:bg-[#262626]"
+   data-aos="fade-up" data-aos-delay="300">
+    Get Started
+    <i class="material-icons text-sm">arrow_forward</i>
+</a>
+
+</div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="py-16 px-8">
+<div class="max-w-2xl mx-auto grid md:grid-cols-3 gap-4">
+
+<div class="bg-[#212121] border border-[#2E2E2E] p-6 rounded-lg">
+    <i class="material-icons mb-3 text-white">flash_on</i>
+    <h3 class="font-medium text-white">Lightning Fast</h3>
+    <p class="text-sm text-gray-400">High-performance endpoints.</p>
+</div>
+
+<div class="bg-[#212121] border border-[#2E2E2E] p-6 rounded-lg">
+    <i class="material-icons mb-3 text-white">lock_open</i>
+    <h3 class="font-medium text-white">No Auth Required</h3>
+    <p class="text-sm text-gray-400">Instant access.</p>
+</div>
+
+<div class="bg-[#212121] border border-[#2E2E2E] p-6 rounded-lg">
+    <i class="material-icons mb-3 text-white">code</i>
+    <h3 class="font-medium text-white">Easy Integration</h3>
+    <p class="text-sm text-gray-400">Simple JSON responses.</p>
+</div>
+
+</div>
+</section>
+
+<!-- ===== FOOTER (NEW STYLE) ===== -->
+<footer class="pt-10 pb-8 px-8 mt-24 border-t border-[#2E2E2E]">
+    <div class="max-w-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+
+        <!-- Left -->
+        <div class="text-center md:text-left">
+            <p id="footer-powered" class="text-gray-400 font-medium text-sm">
+                © 2023 API. All rights reserved.
+            </p>
+        </div>
+
+        <!-- Right -->
+        <div class="flex gap-6">
+
+            <a id="footer-whatsapp" target="_blank" class="group flex flex-col items-center">
+                <div class="w-10 h-10 rounded-full bg-green-500 border border-green-500
+                            flex items-center justify-center mb-2
+                            group-hover:bg-green-900/30 transition-colors">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                </div>
+                <span class="text-xs font-medium text-gray-400">Contact</span>
+            </a>
+
+            <a id="footer-youtube" target="_blank" class="group flex flex-col items-center">
+                <div class="w-10 h-10 rounded-full bg-red-500 border border-red-500
+                            flex items-center justify-center mb-2
+                            group-hover:bg-red-900/30 transition-colors">
+                    <i class="fab fa-youtube text-xl"></i>
+                </div>
+                <span class="text-xs font-medium text-gray-400">YouTube</span>
+            </a>
+
+            <a id="footer-github" target="_blank" class="group flex flex-col items-center">
+                <div class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700
+                            flex items-center justify-center mb-2
+                            group-hover:bg-slate-700 transition-colors">
+<i class="fab fa-github text-white text-xl"></i>
+                </div>
+                <span class="text-xs font-medium text-gray-400">GitHub</span>
+            </a>
+
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+const APP_VERSION = "v1.0.0-x";
+
+async function loadSettings() {
+    try {
+        const res = await fetch("/settings");
+        const s = await res.json();
+
+        document.title = s.name;
+        setMeta("meta-description", s.description);
+        setMeta("og-title", s.name);
+        setMeta("og-description", s.description);
+        setMeta("twitter-title", s.name);
+        setMeta("twitter-description", s.description);
+
+        document.getElementById("hero-title").innerHTML = `
+            <span>${s.name}</span>
+            <span class="px-2 py-[2px] bg-slate-800 border border-[#2E2E2E]
+                         text-gray-300 text-xs font-semibold rounded-full">
+                ${APP_VERSION}
+            </span>
+        `;
+
+        document.getElementById("hero-description").textContent = s.description;
+
+        document.getElementById("footer-whatsapp").href = s.linkWhatsapp;
+        document.getElementById("footer-youtube").href = s.linkYoutube;
+        document.getElementById("footer-github").href = s.linkGithub;
+
+        document.getElementById("footer-powered").textContent =
+            `© ${new Date().getFullYear()} ${s.name}. All rights reserved.`;
+
+    } catch (e) {
+        console.error(e);
+    } finally {
+        setTimeout(() => {
+            hideLoading();
+            AOS.init({ once: true, duration: 1200 });
+        }, 1200);
+    }
+}
+
+function hideLoading() {
+    const l = document.getElementById("loadingScreen");
+    l.style.opacity = "0";
+    setTimeout(() => l.remove(), 500);
+}
+
+function setMeta(id, val) {
+    const el = document.getElementById(id);
+    if (el) el.setAttribute("content", val);
+}
+
+loadSettings();
+</script>
+
+</body>
+</html>
